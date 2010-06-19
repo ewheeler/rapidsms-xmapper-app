@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+    {% block title %} Brinland {% endblock %}
+    {% block stylesheets %}
+    {{ block.super }}
+    <link type="text/css" rel="stylesheet" href="{{ MEDIA_URL }}xmapper/stylesheets/xmapper.css" />
+    {% endblock %}
+    {% block javascripts %}
+    <script src="{{ MEDIA_URL }}xmapper/javascripts/openlayers/OpenLayers.js"></script> 
+    <script src="{{ MEDIA_URL }}xmapper/javascripts/jquery-1.4.2.min.js"></script>
+    {% endblock %}
+    {% block content %}
+    <div class="module">
+        <script type="text/javascript"> 
+            var map;
+            jQuery(function (){
+
+                map = new OpenLayers.Map({
+                    div: 'map', 
+                    //maxExtent: new OpenLayers.Bounds(0, 0, 2340, 1655)
+                    maxExtent: new OpenLayers.Bounds(-180, -90, 180, 90)
+                    //maxExtent: new OpenLayers.Bounds(17.313499, 40.232605, 18.265061, 40.745111)
+                    //maxExtent: new OpenLayers.Bounds(17.805492, 40.743541, 19.259233, 41.524648)
+                    //maxExtent: new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403)
+                });
+    
+                var options_one = {numZoomLevels: 3, isBaseLayer: true};
+    
+                var map_one = new OpenLayers.Layer.Image(
+                    'Brinland',
+                    '{{ MEDIA_URL }}xmapper/images/maps/Brinland_Training_Map_1_light.jpg',
+                    new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403),
+
+                    //new OpenLayers.Size(map.getSize().w, map.getSize().h),
+                    new OpenLayers.Size(800, 565),
+                    options_one
+                );
+                
+                map_one.events.on({
+                    loadstart: function() {
+                        OpenLayers.Console.log("loadstart");
+                    },
+                    loadend: function() {
+                        OpenLayers.Console.log("loadend");
+                    }
+                });
+
+                
+                var options_two = {numZoomLevels: 3};
+
+                var map_two = new OpenLayers.Layer.Image(
+                    'Brinland updated',
+                    '{{ MEDIA_URL }}xmapper/images/maps/Brinland_Training_Map_2.jpg',
+                    new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403),
+                    //new OpenLayers.Size(map.getSize().w, map.getSize().h),
+                    new OpenLayers.Size(800, 565),
+                    options_two
+                );
+
+                map.addLayers([map_one, map_two]);
+
+                $("ul.location_type", this).each(function() {
+                    var loc_type = $(this);
+                    var ico = loc_type.attr("ico");
+                    var title = loc_type.attr("id");
+                    var markers = new OpenLayers.Layer.Markers(title);
+                    map.addLayer(markers)
+
+                    var size = new OpenLayers.Size(15,23);
+                    var pin = new OpenLayers.Icon(ico, size);
+
+                    loc_type.children().each(function () {
+                        var child = $(this);
+                        var lng = child.attr("lng");
+                        var lat = child.attr("lat");
+                        markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(lng, lat),pin.clone()));
+
+                    });
+                });
+    
+                map.addControl(new OpenLayers.Control.LayerSwitcher());
+                map.addControl(new OpenLayers.Control.MousePosition());
+                map.zoomToMaxExtent();
+            });
+        </script> 
+        <div id="map" class="smallmap">
+    
+            <span style="display:none;">
+                {% if xlocs %}
+                {% for xloc in xlocs %}
+                <ul class="location_type" id="{{ xloc.keyword }}" ico="{{ MEDIA_URL }}xmapper/images/icons/ico-0{{ forloop.counter }}.png">
+                    <li lng="{{ xloc.lng }}" lat="{{ xloc.lat }}">12:53 15 June 2010</li>
+                </ul>
+                {% endfor %}
+                {% endif %}
+            </span>
+        </div>
+    </div>
+    {% endblock %}

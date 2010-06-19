@@ -1,0 +1,29 @@
+#inner .module { 
+        width: 800px;
+        height: 600px;        
+}
+
+/* wrap the openlayers map in
+ * something vaugely rapidsms-looking */
+div.olMap {
+	border: 1px solid #636363;
+	border-top: none;
+        height: 100%;
+        width: 100%;
+}
+
+	div.map div.label {
+		font-weight: bold;
+		font-size: 7pt;
+		color: #000;
+		white-space: nowrap;
+	}
+
+	div.map div.container {
+		background: #f8f8ff;
+		height: 50em;
+	}
+
+	div.map ul.labels {
+		display: none;
+	}
