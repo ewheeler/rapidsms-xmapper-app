@@ -91,7 +91,7 @@
                         //anchored bubble popup wide short fixed contents autosize closebox
                         ll = new OpenLayers.LonLat(lng,lat);
                         popupClass = AutoSizeAnchoredBubble;
-                        popupContentHTML = '<p>' + data + '</p>';
+                        popupContentHTML = data;
                         addMarker(ll, popupClass, popupContentHTML, true);
 
                         function addMarker(ll, popupClass, popupContentHTML, closeBox, overflow) {

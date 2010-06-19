@@ -24,11 +24,24 @@ class XLoc(models.Model):
     @property
     def submitted_data(self):
         sub_vals = list(self.submission.values.all())
-        captions = [s.field.caption for s in sub_vals]
-        values = [s.value for s in sub_vals]
+        captions = [str(s.field.caption) for s in sub_vals]
+        values = [str(s.value) for s in sub_vals]
 
         sub_dict = dict(zip(captions, values))
         return sub_dict
+
+    @property
+    def submitted_data_for_web(self):
+        sub_dict = self.submitted_data
+        if "location" in sub_dict:
+            location = sub_dict.pop("location")
+
+        html = ""
+        for key, value in sub_dict.items():
+            item_html = "%s %s" % (str(value), str(key))
+            html.append(item_html)
+
+        return html
 
     @property
     def keyword(self):
@@ -105,7 +118,7 @@ class Group(models.Model):
         ('YL', 'yellow'),
     )
     name = models.CharField(max_length=100, blank=True, null=True)
-    color = models.CharField(max_length=20, choices=COLOR_CHOICES)
+    color = models.CharField(max_length=20, choices=COLOR_CHOICES, default='MN')
 
     def __unicode__(self):
         return self.name
@@ -134,7 +147,9 @@ def handle_submission(sender, **args):
     if not submission.has_errors:
         print "** NO XFORM ERRORS **"
         keyword = xform.keyword
-        group = Group.objects.get_or_create(name=xform.keyword)
+        group, created = Group.objects.get_or_create(name=xform.keyword)
+        if created:
+            print "** GROUP CREATED **"
 
         sub_vals = list(submission.values.all())
         captions = [s.field.caption for s in sub_vals]
