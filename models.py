@@ -52,6 +52,7 @@ class Place(models.Model):
         place = None
         try:
             place = klass.objects.get(slug__iexact=string)
+            return place
         except MultipleObjectsReturned:
             #TODO do something?
             pass 
@@ -83,10 +84,14 @@ class Point(models.Model):
 
 # TODO is this the best place for this?? 
 def handle_submission(sender, **args):
+    print "** RECEIVED XFORM SIGNAL **"
     submission = args['submission']
+    print submission
     xform = args['xform']
+    print xform
 
     if not submission.has_errors:
+        print "** NO XFORM ERRORS **"
         keyword = xform.keyword
 
         sub_vals = list(submission.values.all())
@@ -96,11 +101,18 @@ def handle_submission(sender, **args):
         sub_dict = dict(zip(captions, values))
 
         if "location" in sub_dict:
+            print sub_dict["location"]
             place = Place.find_by_slug(sub_dict["location"]) 
+            print place
             if place is not None:
+                print "** FOUND PLACE **"
                 print place
                 #create XLoc
-                xloc = XLoc.objects.create(xform=submission, place=place)
+                xloc = XLoc.objects.create(submission=submission, place=place)
+                print "** CREATED XLOC **"
+                print xloc
+            else:
+                print "** COULD NOT FIND LOCATION **"
 
 
 # then wire it to the xform_received signal
