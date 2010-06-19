@@ -11,6 +11,7 @@
     {% block content %}
     <div class="module">
         <script type="text/javascript"> 
+            //TODO move this script to its own file
             var map;
             jQuery(function (){
 
@@ -68,6 +69,8 @@
                         OpenLayers.Marker.defaultIcon = function() {
                             var url = OpenLayers.Util.getImagesLocation() + pin_col + "_marker.png";
                             var size = new OpenLayers.Size(21, 25);
+                            // TODO different offset for additional pins at the same lng/lat
+                            // otherwise they are stacked and some unlucky pins are hidden
                             var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
 
                             return new OpenLayers.Icon(url, size, offset);
@@ -93,6 +96,7 @@
                             feature.data.overflow = (overflow) ? "auto" : "hidden";
 
                             var marker = feature.createMarker();
+                            marker.setOpacity(0.6);
 
                             var markerClick = function (evt) {
                                 if (this.popup == null) {
