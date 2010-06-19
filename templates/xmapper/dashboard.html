@@ -60,20 +60,64 @@
 
                 $("ul.location_type", this).each(function() {
                     var loc_type = $(this);
-                    var ico = loc_type.attr("ico");
                     var title = loc_type.attr("id");
                     var markers = new OpenLayers.Layer.Markers(title);
                     map.addLayer(markers)
 
-                    var size = new OpenLayers.Size(15,23);
-                    var pin = new OpenLayers.Icon(ico, size);
+                    //var size = new OpenLayers.Size(15,23);
+                    //var pin = new OpenLayers.Icon(ico, size);
+
 
                     loc_type.children().each(function () {
                         var child = $(this);
                         var lng = child.attr("lng");
                         var lat = child.attr("lat");
-                        markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(lng, lat),pin.clone()));
+                        var data = child.attr("sub");
+                        var pin_col = child.attr("pin_col");
 
+                        OpenLayers.Marker.defaultIcon = function() {
+                            var url = OpenLayers.Util.getImagesLocation() + pin_col + "_marker.png";
+                            var size = new OpenLayers.Size(21, 25);
+                            return new OpenLayers.Icon(url, size);
+                        };
+                        //markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(lng, lat),pin.clone()));
+
+
+                        //anchoredbubble
+                        AutoSizeAnchoredBubble = OpenLayers.Class(OpenLayers.Popup.AnchoredBubble, {
+                            'autoSize': true
+                        });
+
+                        //anchored bubble popup wide short fixed contents autosize closebox
+                        ll = new OpenLayers.LonLat(lng,lat);
+                        popupClass = AutoSizeAnchoredBubble;
+                        popupContentHTML = '<p>' + data + '</p>';
+                        addMarker(ll, popupClass, popupContentHTML, true);
+
+                        function addMarker(ll, popupClass, popupContentHTML, closeBox, overflow) {
+
+                            var feature = new OpenLayers.Feature(markers, ll);
+                            feature.closeBox = closeBox;
+                            feature.popupClass = popupClass;
+                            feature.data.popupContentHTML = popupContentHTML;
+                            feature.data.overflow = (overflow) ? "auto" : "hidden";
+
+                            var marker = feature.createMarker();
+
+                            var markerClick = function (evt) {
+                                if (this.popup == null) {
+                                    this.popup = this.createPopup(this.closeBox);
+                                    map.addPopup(this.popup);
+                                    this.popup.show();
+                                } else {
+                                    this.popup.toggle();
+                                }
+                                currentPopup = this.popup;
+                                OpenLayers.Event.stop(evt);
+                            };
+                            marker.events.register("mousedown", feature, markerClick);
+                            markers.addMarker(marker);
+                        }
                     });
                 });
     
@@ -87,9 +131,9 @@
             <span style="display:none;">
                 {% if xlocs_by_key %}
                 {% for k, v in xlocs_by_key.items %}
-                <ul class="location_type" id="{{ k }}" ico="{{ MEDIA_URL }}xmapper/images/icons/ico-0{{ forloop.counter }}.png">
+                <ul class="location_type" id="{{ k }}">
                     {% for xloc in v %}
-                    <li lng="{{ xloc.lng }}" lat="{{ xloc.lat }}">12:53 15 June 2010</li>
+                    <li lng="{{ xloc.lng }}" lat="{{ xloc.lat }}" sub="{{ xloc.submitted_data }}" pin_col="{{ xloc.color }}">12:53 15 June 2010</li>
                     {% endfor %}
                 </ul>
                 {% endfor %}
