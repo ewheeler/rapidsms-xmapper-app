@@ -85,10 +85,12 @@
         <div id="map" class="smallmap">
     
             <span style="display:none;">
-                {% if xlocs %}
-                {% for xloc in xlocs %}
-                <ul class="location_type" id="{{ xloc.keyword }}" ico="{{ MEDIA_URL }}xmapper/images/icons/ico-0{{ forloop.counter }}.png">
+                {% if xlocs_by_key %}
+                {% for k, v in xlocs_by_key.items %}
+                <ul class="location_type" id="{{ k }}" ico="{{ MEDIA_URL }}xmapper/images/icons/ico-0{{ forloop.counter }}.png">
+                    {% for xloc in v %}
                     <li lng="{{ xloc.lng }}" lat="{{ xloc.lat }}">12:53 15 June 2010</li>
+                    {% endfor %}
                 </ul>
                 {% endfor %}
                 {% endif %}

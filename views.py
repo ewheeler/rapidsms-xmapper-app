@@ -8,6 +8,21 @@ from .models import XLoc
 @require_GET
 def index(req): 
     xlocs = XLoc.objects.all()
-    breadcrumbs = (('Map', ''),)
-    return render_to_response(req, "xmapper/dashboard.html", { 'xlocs': xlocs, 'breadcrumbs': breadcrumbs } )
+    keys = []
+    for xloc in xlocs:
+        if xloc.keyword not in keys:
+            keys.append(xloc.keyword)
 
+    print keys
+
+    xlocs_by_key = {}
+    for key in keys:
+        key_matches = []
+        for xloc in xlocs:
+            if xloc.keyword == key:
+                key_matches.append(xloc)
+        xlocs_by_key.update({key : key_matches})
+    print xlocs_by_key
+
+    breadcrumbs = (('Map', ''),)
+    return render_to_response(req, "xmapper/dashboard.html", { 'xlocs_by_key': xlocs_by_key, 'breadcrumbs': breadcrumbs } )
