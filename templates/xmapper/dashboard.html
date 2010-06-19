@@ -16,11 +16,7 @@
 
                 map = new OpenLayers.Map({
                     div: 'map', 
-                    //maxExtent: new OpenLayers.Bounds(0, 0, 2340, 1655)
                     maxExtent: new OpenLayers.Bounds(-180, -90, 180, 90)
-                    //maxExtent: new OpenLayers.Bounds(17.313499, 40.232605, 18.265061, 40.745111)
-                    //maxExtent: new OpenLayers.Bounds(17.805492, 40.743541, 19.259233, 41.524648)
-                    //maxExtent: new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403)
                 });
     
                 var options_one = {numZoomLevels: 3, isBaseLayer: true};
@@ -30,7 +26,6 @@
                     '{{ MEDIA_URL }}xmapper/images/maps/Brinland_Training_Map_1_light.jpg',
                     new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403),
 
-                    //new OpenLayers.Size(map.getSize().w, map.getSize().h),
                     new OpenLayers.Size(800, 565),
                     options_one
                 );
@@ -51,7 +46,6 @@
                     'Brinland updated',
                     '{{ MEDIA_URL }}xmapper/images/maps/Brinland_Training_Map_2.jpg',
                     new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403),
-                    //new OpenLayers.Size(map.getSize().w, map.getSize().h),
                     new OpenLayers.Size(800, 565),
                     options_two
                 );
@@ -63,10 +57,6 @@
                     var title = loc_type.attr("id");
                     var markers = new OpenLayers.Layer.Markers(title);
                     map.addLayer(markers)
-
-                    //var size = new OpenLayers.Size(15,23);
-                    //var pin = new OpenLayers.Icon(ico, size);
-
 
                     loc_type.children().each(function () {
                         var child = $(this);
@@ -80,8 +70,6 @@
                             var size = new OpenLayers.Size(21, 25);
                             return new OpenLayers.Icon(url, size);
                         };
-                        //markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(lng, lat),pin.clone()));
-
 
                         //anchoredbubble
                         AutoSizeAnchoredBubble = OpenLayers.Class(OpenLayers.Popup.AnchoredBubble, {
