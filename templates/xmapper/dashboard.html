@@ -44,7 +44,7 @@
 
                 var map_two = new OpenLayers.Layer.Image(
                     'Brinland updated',
-                    '{{ MEDIA_URL }}xmapper/images/maps/Brinland_Training_Map_2.jpg',
+                    '{{ MEDIA_URL }}xmapper/images/maps/Brinland_Training_Map_2_light.jpg',
                     new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403),
                     new OpenLayers.Size(800, 565),
                     options_two
@@ -123,7 +123,7 @@
                 {% for k, v in xlocs_by_key.items %}
                 <ul class="location_type" id="{{ k }}">
                     {% for xloc in v %}
-                    <li lng="{{ xloc.lng }}" lat="{{ xloc.lat }}" sub="{{ xloc.submitted_data }}" pin_col="{{ xloc.color }}">12:53 15 June 2010</li>
+                    <li lng="{{ xloc.lng }}" lat="{{ xloc.lat }}" sub="{{ xloc.submitted_data }}" pin_col="{{ xloc.color }}"></li>
                     {% endfor %}
                 </ul>
                 {% endfor %}
