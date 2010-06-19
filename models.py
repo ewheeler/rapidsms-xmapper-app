@@ -9,9 +9,26 @@ from xforms.models import xform_received
 class XLoc(models.Model):
     submission = models.ForeignKey(XFormSubmission)
     place = models.ForeignKey('Place')
+    group = models.ForeignKey('Group', blank=True, null=True)
 
     def __unicode__(self):
         return "%s form from %s" % (self.submission.xform.keyword, self.place.name)
+
+    @property
+    def color(self):
+        if self.group is not None:
+            if self.group.color is not None:
+                return self.group.get_color_display()
+        return "red"
+
+    @property
+    def submitted_data(self):
+        sub_vals = list(self.submission.values.all())
+        captions = [s.field.caption for s in sub_vals]
+        values = [s.value for s in sub_vals]
+
+        sub_dict = dict(zip(captions, values))
+        return sub_dict
 
     @property
     def keyword(self):
@@ -69,6 +86,30 @@ class Category(models.Model):
     def __unicode__(self):
         return self.name
 
+class Group(models.Model):
+    COLOR_CHOICES = (
+        ('AQ', 'aqua'),
+        ('BK', 'black'),
+        ('BL', 'blue'),
+        ('FU', 'fuchsia'),
+        ('GR', 'green'),
+        ('GY', 'grey'),
+        ('MN', 'maroon'),
+        ('NV', 'navy'),
+        ('OL', 'olive'),
+        ('PU', 'purple'),
+        ('RD', 'red'),
+        ('SL', 'silver'),
+        ('TL', 'teal'),
+        ('WT', 'white'),
+        ('YL', 'yellow'),
+    )
+    name = models.CharField(max_length=100, blank=True, null=True)
+    color = models.CharField(max_length=20, choices=COLOR_CHOICES)
+
+    def __unicode__(self):
+        return self.name
+
 class Point(models.Model):
     """
     This model represents an anonymous point on the globe. It should be
@@ -93,6 +134,7 @@ def handle_submission(sender, **args):
     if not submission.has_errors:
         print "** NO XFORM ERRORS **"
         keyword = xform.keyword
+        group = Group.objects.get_or_create(name=xform.keyword)
 
         sub_vals = list(submission.values.all())
         captions = [s.field.caption for s in sub_vals]
@@ -108,7 +150,7 @@ def handle_submission(sender, **args):
                 print "** FOUND PLACE **"
                 print place
                 #create XLoc
-                xloc = XLoc.objects.create(submission=submission, place=place)
+                xloc = XLoc.objects.create(submission=submission, place=place, group=group)
                 print "** CREATED XLOC **"
                 print xloc
             else:
