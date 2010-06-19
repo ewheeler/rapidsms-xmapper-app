@@ -68,7 +68,9 @@
                         OpenLayers.Marker.defaultIcon = function() {
                             var url = OpenLayers.Util.getImagesLocation() + pin_col + "_marker.png";
                             var size = new OpenLayers.Size(21, 25);
-                            return new OpenLayers.Icon(url, size);
+                            var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+
+                            return new OpenLayers.Icon(url, size, offset);
                         };
 
                         //anchoredbubble
