@@ -1,0 +1,1675 @@
+[
+    {
+        "pk": 1, 
+        "model": "xmapper.xloc", 
+        "fields": {
+            "group": 1, 
+            "place": 13, 
+            "submission": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 1, 
+            "name": "Aproko", 
+            "slug": "aproko"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 2, 
+            "name": "Ahytnta", 
+            "slug": "ahytnta"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 3, 
+            "name": "Aboki", 
+            "slug": "aboki"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 4, 
+            "name": "Chonku", 
+            "slug": "chonku"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 5, 
+            "name": "Kankusum", 
+            "slug": "kankusum"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 6, 
+            "name": "Senti", 
+            "slug": "senti"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 7, 
+            "name": "Baza", 
+            "slug": "baza"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 8, 
+            "name": "Kubaji", 
+            "slug": "kubaji"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 9, 
+            "name": "Shadugh", 
+            "slug": "shadugh"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 10, 
+            "name": "Gatjum", 
+            "slug": "gatjum"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 11, 
+            "name": "Gum", 
+            "slug": "gum"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 12, 
+            "name": "Awubw", 
+            "slug": "awubw"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 13, 
+            "name": "Nasarawa", 
+            "slug": "nasarawa"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 14, 
+            "name": "Desel", 
+            "slug": "desel"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 15, 
+            "name": "Adamu-jimi", 
+            "slug": "adamu-jimi"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 16, 
+            "name": "Gangapana", 
+            "slug": "gangapana"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 17, 
+            "name": "Allon", 
+            "slug": "allon"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 18, 
+            "name": "Baude", 
+            "slug": "baude"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 19, 
+            "name": "Nyabar", 
+            "slug": "nyabar"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 20, 
+            "name": "Zore", 
+            "slug": "zore"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 21, 
+            "name": "San Vito", 
+            "slug": "san-vito"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 22, 
+            "name": "Birto", 
+            "slug": "birto"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 23, 
+            "name": "Bogouma", 
+            "slug": "bogouma"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 24, 
+            "name": "Badoum", 
+            "slug": "badoum"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 25, 
+            "name": "Bobok", 
+            "slug": "bobok"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 26, 
+            "name": "Ossandre", 
+            "slug": "ossandre"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 27, 
+            "name": "Bekario", 
+            "slug": "bekario"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 28, 
+            "name": "Dize", 
+            "slug": "dize"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 29, 
+            "name": "Bawa", 
+            "slug": "bawa"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 30, 
+            "name": "Balla", 
+            "slug": "balla"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 31, 
+            "name": "Punta Della Contessa", 
+            "slug": "punta-della-contessa"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 32, 
+            "name": "Badega", 
+            "slug": "badega"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 33, 
+            "name": "Sebore", 
+            "slug": "sebore"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 34, 
+            "name": "Gangoy", 
+            "slug": "gangoy"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 35, 
+            "name": "Fom", 
+            "slug": "fom"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 36, 
+            "name": "Mann", 
+            "slug": "mann"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 37, 
+            "name": "Bratina", 
+            "slug": "bratina"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 38, 
+            "name": "Aproko", 
+            "slug": "aproko"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 39, 
+            "name": "Ahytnta", 
+            "slug": "ahytnta"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 40, 
+            "name": "Aboki", 
+            "slug": "aboki"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 41, 
+            "name": "Chonku", 
+            "slug": "chonku"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 42, 
+            "name": "Kankusum", 
+            "slug": "kankusum"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 43, 
+            "name": "Senti", 
+            "slug": "senti"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 44, 
+            "name": "Baza", 
+            "slug": "baza"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 45, 
+            "name": "Kubaji", 
+            "slug": "kubaji"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 46, 
+            "name": "Shadugh", 
+            "slug": "shadugh"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 47, 
+            "name": "Gatjum", 
+            "slug": "gatjum"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 48, 
+            "name": "Gum", 
+            "slug": "gum"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 49, 
+            "name": "Awubw", 
+            "slug": "awubw"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 50, 
+            "name": "Nasarawa", 
+            "slug": "nasarawa"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 51, 
+            "name": "Desel", 
+            "slug": "desel"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 52, 
+            "name": "Adamu-jimi", 
+            "slug": "adamu-jimi"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 53, 
+            "name": "Gangapana", 
+            "slug": "gangapana"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 54, 
+            "name": "Allon", 
+            "slug": "allon"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 55, 
+            "name": "Baude", 
+            "slug": "baude"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 56, 
+            "name": "Nyabar", 
+            "slug": "nyabar"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 57, 
+            "name": "Zore", 
+            "slug": "zore"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 58, 
+            "name": "San Vito", 
+            "slug": "san-vito"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 59, 
+            "name": "Birto", 
+            "slug": "birto"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 60, 
+            "name": "Bogouma", 
+            "slug": "bogouma"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 61, 
+            "name": "Badoum", 
+            "slug": "badoum"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 62, 
+            "name": "Bobok", 
+            "slug": "bobok"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 63, 
+            "name": "Ossandre", 
+            "slug": "ossandre"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 64, 
+            "name": "Bekario", 
+            "slug": "bekario"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 65, 
+            "name": "Dize", 
+            "slug": "dize"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 66, 
+            "name": "Bawa", 
+            "slug": "bawa"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 67, 
+            "name": "Balla", 
+            "slug": "balla"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 68, 
+            "name": "Punta Della Contessa", 
+            "slug": "punta-della-contessa"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 69, 
+            "name": "Badega", 
+            "slug": "badega"
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 70, 
+            "name": "Sebore", 
+            "slug": "sebore"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 71, 
+            "name": "Gangoy", 
+            "slug": "gangoy"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 72, 
+            "name": "Fom", 
+            "slug": "fom"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 73, 
+            "name": "Mann", 
+            "slug": "mann"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 74, 
+            "name": "Bratina", 
+            "slug": "bratina"
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 75, 
+            "name": "Bullit", 
+            "slug": "bullit"
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 76, 
+            "name": "Ballit", 
+            "slug": "ballit"
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 77, 
+            "name": "Giga", 
+            "slug": "giga"
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 78, 
+            "name": "Gigo", 
+            "slug": "gigo"
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 79, 
+            "name": "Gast", 
+            "slug": "gast"
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 80, 
+            "name": "Gulo", 
+            "slug": "gulo"
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 81, 
+            "name": "Guivo", 
+            "slug": "guivo"
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 82, 
+            "name": "Galla", 
+            "slug": "galla"
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 83, 
+            "name": "Gilla", 
+            "slug": "gilla"
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 84, 
+            "name": "Gulla", 
+            "slug": "gulla"
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 85, 
+            "name": "Gadum", 
+            "slug": "gadum"
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 86, 
+            "name": "Gabib", 
+            "slug": "gabib"
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 87, 
+            "name": "Gadara", 
+            "slug": "gadara"
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 88, 
+            "name": "Bilo", 
+            "slug": "bilo"
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 89, 
+            "name": "Guilli", 
+            "slug": "guilli"
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 90, 
+            "name": "Gilt", 
+            "slug": "gilt"
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 91, 
+            "name": "Glop", 
+            "slug": "glop"
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "xmapper.place", 
+        "fields": {
+            "category": [], 
+            "point": 92, 
+            "name": "Garit", 
+            "slug": "garit"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "xmapper.group", 
+        "fields": {
+            "color": "TL", 
+            "name": "school"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.82053", 
+            "longitude": "18.32991"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.82919", 
+            "longitude": "18.35407"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.84925", 
+            "longitude": "18.37823"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.8456", 
+            "longitude": "18.38324"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.84196", 
+            "longitude": "18.50176"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.82281", 
+            "longitude": "18.52546"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.8219", 
+            "longitude": "18.49036"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.81916", 
+            "longitude": "18.50905"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.81415", 
+            "longitude": "18.52181"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.80868", 
+            "longitude": "18.48398"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.80321", 
+            "longitude": "18.51953"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.7982", 
+            "longitude": "18.47623"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.7909", 
+            "longitude": "18.45161"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.79045", 
+            "longitude": "18.4931"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.78771", 
+            "longitude": "18.52045"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.77677", 
+            "longitude": "18.53913"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.77859", 
+            "longitude": "18.45982"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.7631", 
+            "longitude": "18.50768"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.76446", 
+            "longitude": "18.55554"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.72572", 
+            "longitude": "18.47805"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.85198", 
+            "longitude": "18.65355"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.82737", 
+            "longitude": "18.59702"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.8219", 
+            "longitude": "18.64352"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.81187", 
+            "longitude": "18.58791"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.80731", 
+            "longitude": "18.65127"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.79728", 
+            "longitude": "18.60204"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.78589", 
+            "longitude": "18.63486"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.78133", 
+            "longitude": "18.58061"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.76036", 
+            "longitude": "18.61207"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.75307", 
+            "longitude": "18.63121"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.75124", 
+            "longitude": "18.77434"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.73894", 
+            "longitude": "18.62802"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.74076", 
+            "longitude": "18.67041"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.71204", 
+            "longitude": "18.64443"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.71022", 
+            "longitude": "18.71645"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.69472", 
+            "longitude": "18.70734"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.68606", 
+            "longitude": "18.59247"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.82053", 
+            "longitude": "18.32991"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.82919", 
+            "longitude": "18.35407"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.84925", 
+            "longitude": "18.37823"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.8456", 
+            "longitude": "18.38324"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.84196", 
+            "longitude": "18.50176"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.82281", 
+            "longitude": "18.52546"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.8219", 
+            "longitude": "18.49036"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.81916", 
+            "longitude": "18.50905"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.81415", 
+            "longitude": "18.52181"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.80868", 
+            "longitude": "18.48398"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.80321", 
+            "longitude": "18.51953"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.7982", 
+            "longitude": "18.47623"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.7909", 
+            "longitude": "18.45161"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.79045", 
+            "longitude": "18.4931"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.78771", 
+            "longitude": "18.52045"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.77677", 
+            "longitude": "18.53913"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.77859", 
+            "longitude": "18.45982"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.7631", 
+            "longitude": "18.50768"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.76446", 
+            "longitude": "18.55554"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.72572", 
+            "longitude": "18.47805"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.85198", 
+            "longitude": "18.65355"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.82737", 
+            "longitude": "18.59702"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.8219", 
+            "longitude": "18.64352"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.81187", 
+            "longitude": "18.58791"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.80731", 
+            "longitude": "18.65127"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.79728", 
+            "longitude": "18.60204"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.78589", 
+            "longitude": "18.63486"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.78133", 
+            "longitude": "18.58061"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.76036", 
+            "longitude": "18.61207"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.75307", 
+            "longitude": "18.63121"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.75124", 
+            "longitude": "18.77434"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.73894", 
+            "longitude": "18.62802"
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.74076", 
+            "longitude": "18.67041"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.71204", 
+            "longitude": "18.64443"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.71022", 
+            "longitude": "18.71645"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.69472", 
+            "longitude": "18.70734"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.68606", 
+            "longitude": "18.59247"
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.76993", 
+            "longitude": "18.62232"
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.77312", 
+            "longitude": "18.61457"
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.77062", 
+            "longitude": "18.59976"
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.76606", 
+            "longitude": "18.58449"
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.75854", 
+            "longitude": "18.56785"
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.76173", 
+            "longitude": "18.58267"
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.75466", 
+            "longitude": "18.59042"
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.74942", 
+            "longitude": "18.56876"
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.73529", 
+            "longitude": "18.57446"
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.72298", 
+            "longitude": "18.5797"
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.72777", 
+            "longitude": "18.5911"
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.72754", 
+            "longitude": "18.60067"
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.73438", 
+            "longitude": "18.60865"
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.746", 
+            "longitude": "18.6091"
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.75557", 
+            "longitude": "18.61412"
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.76013", 
+            "longitude": "18.62301"
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.74327", 
+            "longitude": "18.61868"
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "xmapper.point", 
+        "fields": {
+            "latitude": "40.72982", 
+            "longitude": "18.60956"
+        }
+    }
+]
