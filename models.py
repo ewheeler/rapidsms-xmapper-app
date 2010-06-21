@@ -9,6 +9,8 @@ from xforms.models import XForm, XFormSubmission
 from xforms.models import xform_received
 
 class XLoc(models.Model):
+    """ Represents an XForm submission at a particular location (place)
+        and optionally a related Group for marker organization purposes. """
     submission = models.ForeignKey(XFormSubmission)
     place = models.ForeignKey('Place')
     group = models.ForeignKey('Group', blank=True, null=True)
@@ -16,6 +18,7 @@ class XLoc(models.Model):
     def __unicode__(self):
         return "%s form from %s" % (self.submission.xform.keyword, self.place.name)
 
+    # convenience methods as properties
     @property
     def color(self):
         if self.group is not None:
@@ -25,25 +28,14 @@ class XLoc(models.Model):
 
     @property
     def submitted_data(self):
+        """ Returns a dict representation of related XForm submission
+            e.g., {u'field caption' : u'field value', ...} """
         sub_vals = list(self.submission.values.all())
         captions = [str(s.field.caption) for s in sub_vals]
         values = [str(s.value) for s in sub_vals]
 
         sub_dict = dict(zip(captions, values))
         return sub_dict
-
-    @property
-    def submitted_data_for_web(self):
-        sub_dict = self.submitted_data
-        if "location" in sub_dict:
-            location = sub_dict.pop("location")
-
-        html = ""
-        for key, value in sub_dict.items():
-            item_html = "%s %s" % (str(value), str(key))
-            html.append(item_html)
-
-        return html
 
     @property
     def keyword(self):
@@ -68,6 +60,8 @@ class XLoc(models.Model):
         return "" 
 
 class Place(models.Model):
+    """ Basic representation of a location, called Place as an attempt to
+        avoid confusion with Locations app's Location model. """
     name = models.CharField(max_length=100, blank=True, null=True)
 
     slug = models.CharField(max_length=30, blank=True, null=True,
@@ -96,12 +90,26 @@ class Place(models.Model):
                 return None
 
 class Category(models.Model):
+    """ TODO find out if this is useful for anything ... """
     name = models.CharField(max_length=100, blank=True, null=True)
 
     def __unicode__(self):
         return self.name
 
 class Group(models.Model):
+    """ Simple class for organizing map marker colors/icons.
+        These COLOR_CHOICES are the first portion of icon image
+        filenames in static/javascripts/openlayers/img/COLOR_CHOICE_marker.png
+
+        To add a new marker, place your png in the above directory and name it
+        MYICON_marker.png and add a tuple to the COLOR_CHOICES
+        e.g., ('MY', 'MYICON')
+
+        Please be aware that the map marker javascript is expecting 
+        21 by 25 pixel icons, so yours might get warped. 
+        Offending code is marked with a TODO in templates/xmapper/dashboard.html
+        While you're at it, it'd be nice to be able to upload new icons via web :)
+    """
     COLOR_CHOICES = (
         ('AQ', 'aqua'),
         ('BK', 'black'),
@@ -150,10 +158,13 @@ def handle_submission(sender, **args):
     if not submission.has_errors:
         print "** NO XFORM ERRORS **"
         keyword = xform.keyword
+        # assign to a Group according to XForm's keyword so all of an
+        # XForm's submission markers are the same color
         group, created = Group.objects.get_or_create(name=xform.keyword)
         if created:
             print "** GROUP CREATED **"
 
+        # make a nice little dict of {u'field.caption' : u'field.value'}s
         sub_vals = list(submission.values.all())
         print sub_vals
         captions = [s.field.caption for s in sub_vals]
@@ -164,6 +175,8 @@ def handle_submission(sender, **args):
         sub_dict = dict(zip(captions, values))
         print sub_dict
 
+        # if XForm submission has a field captioned 'location', try to find 
+        # a place that has a slug that matches the location field's value
         if "location" in sub_dict:
             print sub_dict["location"]
             place = Place.find_by_slug(sub_dict["location"]) 
@@ -178,6 +191,9 @@ def handle_submission(sender, **args):
             else:
                 print "** COULD NOT FIND LOCATION **"
 
+        # if XForm submission has fields captioned 'from' and 'to', try to find
+        # places that have slugs that match these fields' values
+        # and then create a new Place midway between these two places
         if "from" in sub_dict:
             print sub_dict["from"]
             if "to" in sub_dict:
