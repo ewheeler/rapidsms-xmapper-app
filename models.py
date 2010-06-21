@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # vim: ai ts=4 sts=4 et sw=5
 
+from decimal import Decimal as D
+
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.db import models
 from xforms.models import XForm, XFormSubmission
@@ -116,6 +118,7 @@ class Group(models.Model):
         ('TL', 'teal'),
         ('WT', 'white'),
         ('YL', 'yellow'),
+        ('RO', 'road'),
     )
     name = models.CharField(max_length=100, blank=True, null=True)
     color = models.CharField(max_length=20, choices=COLOR_CHOICES, default='MN')
@@ -152,10 +155,14 @@ def handle_submission(sender, **args):
             print "** GROUP CREATED **"
 
         sub_vals = list(submission.values.all())
+        print sub_vals
         captions = [s.field.caption for s in sub_vals]
+        print captions
         values = [s.value for s in sub_vals]
+        print values
 
         sub_dict = dict(zip(captions, values))
+        print sub_dict
 
         if "location" in sub_dict:
             print sub_dict["location"]
@@ -170,6 +177,29 @@ def handle_submission(sender, **args):
                 print xloc
             else:
                 print "** COULD NOT FIND LOCATION **"
+
+        if "from" in sub_dict:
+            print sub_dict["from"]
+            if "to" in sub_dict:
+                print sub_dict["to"]
+                from_place = Place.find_by_slug(sub_dict["from"])
+                print from_place
+                to_place = Place.find_by_slug(sub_dict["to"])
+                print to_place
+                if from_place is not None:
+                    print "** FOUND FROM **"
+                    print from_place
+                    if to_place is not None:
+                        print "** FOUND TO **"
+                        print to_place
+                        mid_lat = (from_place.point.latitude + to_place.point.latitude)/D("2.0")
+                        mid_lng = (from_place.point.longitude + to_place.point.longitude)/D("2.0")
+                        midpoint = Point.objects.create(latitude=mid_lat, longitude=mid_lng)
+                        print "** CREATED POINT **"
+                        road_condition_place = Place.objects.create(name="road condition", slug="road-condition", point=midpoint)
+                        print "** CREATED PLACE **"
+                        xloc = XLoc.objects.create(submission=submission, place=road_condition_place, group=group)
+                        print "** CREATED XLOC **"
 
 
 # then wire it to the xform_received signal

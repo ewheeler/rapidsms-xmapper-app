@@ -1,0 +1,52 @@
+[
+    {
+        "pk": 1, 
+        "model": "xforms.xform", 
+        "fields": {
+            "name": "road condition", 
+            "keyword": "road", 
+            "created": "2010-06-21 07:37:08", 
+            "modified": "2010-06-21 07:37:08", 
+            "owner": 1, 
+            "active": true, 
+            "response": "Thank you. Received road report.", 
+            "description": "road condition report"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "xforms.xformfield", 
+        "fields": {
+            "description": "travelling from", 
+            "caption": "from", 
+            "command": "f", 
+            "type": "string", 
+            "order": 0, 
+            "xform": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "xforms.xformfield", 
+        "fields": {
+            "description": "travelling to", 
+            "caption": "to", 
+            "command": "t", 
+            "type": "string", 
+            "order": 1, 
+            "xform": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "xforms.xformfield", 
+        "fields": {
+            "description": "condition of road", 
+            "caption": "condition", 
+            "command": "c", 
+            "type": "string", 
+            "order": 2, 
+            "xform": 1
+        }
+    }
+]
