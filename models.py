@@ -127,6 +127,8 @@ class Group(models.Model):
         ('WT', 'white'),
         ('YL', 'yellow'),
         ('RO', 'road'),
+        ('RU', 'road_unpassable'),
+        ('RP', 'road_passable'),
     )
     name = models.CharField(max_length=100, blank=True, null=True)
     color = models.CharField(max_length=20, choices=COLOR_CHOICES, default='MN')
@@ -214,6 +216,15 @@ def handle_submission(sender, **args):
                         print "** CREATED POINT **"
                         road_condition_place = Place.objects.create(name="road condition", slug="road-condition", point=midpoint)
                         print "** CREATED PLACE **"
+                        print sub_dict["condition"]
+                        condition = sub_dict["condition"]
+                        if condition in ['bad', 'unpassable', 'blocked']:
+                            group, created = Group.objects.get_or_create(name="road_unpassable", color="RU")
+
+                        if condition in ['good', 'passable', 'clear', 'cleared', 'fixed']:
+                            group, created = Group.objects.get_or_create(name="road_passable", color="RP")
+
+                        print group
                         xloc = XLoc.objects.create(submission=submission, place=road_condition_place, group=group)
                         print "** CREATED XLOC **"
 

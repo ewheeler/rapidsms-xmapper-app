@@ -68,6 +68,7 @@
 
                         OpenLayers.Marker.defaultIcon = function() {
                             var url = OpenLayers.Util.getImagesLocation() + pin_col + "_marker.png";
+                            // TODO don't warp icons that do not have these dimensions
                             var size = new OpenLayers.Size(21, 25);
                             // TODO different offset for additional pins at the same lng/lat
                             // otherwise they are stacked and some unlucky pins are hidden
