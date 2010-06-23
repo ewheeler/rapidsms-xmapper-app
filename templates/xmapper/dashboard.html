@@ -51,7 +51,23 @@
                     options_two
                 );
 
-                map.addLayers([map_one, map_two]);
+                var map_three = new OpenLayers.Layer.Image(
+                    'Brinland disp_under5',
+                    '{{ MEDIA_URL }}xmapper/images/maps/Brinland_Training_Map_3_dark.jpg',
+                    new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403),
+                    new OpenLayers.Size(800, 565),
+                    options_two
+                );
+
+                var map_four = new OpenLayers.Layer.Image(
+                    'Brinland disp_6_to_14',
+                    '{{ MEDIA_URL }}xmapper/images/maps/Brinland_Training_Map_4_dark.jpg',
+                    new OpenLayers.Bounds(18.040924, 40.598313, 19.006348, 41.113403),
+                    new OpenLayers.Size(800, 565),
+                    options_two
+                );
+
+                map.addLayers([map_one, map_two, map_three, map_four]);
 
                 $("ul.location_type", this).each(function() {
                     var loc_type = $(this);
@@ -97,7 +113,7 @@
                             feature.data.overflow = (overflow) ? "auto" : "hidden";
 
                             var marker = feature.createMarker();
-                            marker.setOpacity(0.6);
+                            marker.setOpacity(0.4);
 
                             var markerClick = function (evt) {
                                 if (this.popup == null) {
