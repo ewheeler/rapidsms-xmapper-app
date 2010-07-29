@@ -3,10 +3,10 @@ import random
 
 from django.http import HttpResponse
 from django.views.decorators.http import require_GET, require_POST
-from django.shortcuts import redirect, get_object_or_404
+from django.shortcuts import redirect, get_object_or_404, render_to_response
+from django.template import RequestContext
 from django.conf import settings
 
-from rapidsms.utils import render_to_response
 from .models import XLoc, Place
 
 @require_GET
@@ -29,7 +29,9 @@ def index(req):
     print xlocs_by_key
 
     breadcrumbs = (('Map', ''),)
-    return render_to_response(req, "xmapper/dashboard.html", { 'xlocs_by_key': xlocs_by_key, 'breadcrumbs': breadcrumbs } )
+    return render_to_response("xmapper/dashboard.html",
+        { 'xlocs_by_key': xlocs_by_key, 'breadcrumbs': breadcrumbs },
+        context_instance=RequestContext(req))
 
 def export_for_heatmap(req):
     response = HttpResponse(mimetype='text/csv')
