@@ -1,0 +1,7 @@
+RapidSMS app for plotting XForm entries on a map:
+   - requires XForms Builder app http://github.com/ewheeler/rapidsms-xforms-builder-app
+   - uses OpenLayers
+   - can specify different placemark colors for each XForm
+
+NOTE:
+   - originally used with a custom map image, so will need to be updated to use OSM tiles
